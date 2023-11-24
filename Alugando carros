@@ -1,0 +1,98 @@
+from time import sleep
+
+distância = int(input("Qual é a distância da viagem que você deseja percorrer? "))
+print("Que legal! Você está prestes a embarcar em uma viagem de {} km/h".format(distância))
+print("-=-" * 20)
+
+print("Bom, agora que já sabemos a distância que você irá ter que percorrer,"
+      "calcularemos conforme as nossas diretrizes estabelecidas")
+print("A cada 200km/h, sempre multiplicaremos por R$ 0.45 ")
+print("-=-" * 20)
+
+calculo = distância * 0.45
+print("Estamos calculando, pode levar alguns segundos...")
+sleep(3)
+print("Segundo os calculos feitos, o valor total da sua viagem será de R$ {}".format(calculo))
+print("-=-" * 20)
+
+sleep(3)
+print("Agora que já sabemos sobre a distância da viagem.\n Nos informe alguns detalhes da viagem")
+print("-=-" * 20)
+portas = int(input("Qual é a quantidade de portas que deseja em seu veículo?" ))
+malas = str(input("Você gostaria de um carro com um amplo  espaço no porta malas? "))
+ar = str(input("Ar-condicionado incluso? "))
+print("-=-" * 20)
+print("Agora que sabemos alguns detalhes, buscaremos por carros que atenda o seu pedido")
+sleep(3)
+print("Só um momento...")
+sleep(2)
+print("-=-" * 20)
+
+if portas == "4":
+      print("A primeira sugestão é o carro Fiat Cronos")
+else:
+    print("A primeira opção de carro com apenas 2 portas é o Citroen DS3")
+if malas == "sim":
+      print("A segunda sugestão é o carro Volkswagen Virtus")
+else:
+    print("A segunda opção de carro é um Fiat Uno 2012 ")
+if ar == "sim":
+    print("A terceira sugestão é o carro City da marca Honda")
+else:
+    print("A terceira opção de carro é um Fiat Mobi Easy")
+
+#Cadastro
+escolha = str(input("Dada as opções de carros, qual seria a melhor escolha para você? "))
+
+print("-=-" * 20)
+print("Perfeito! o carro {} é uma ótima escolha".format(escolha))
+print("Para finalizarmos o seu aluguel, pediremos que nos informe alguns dados solicitados")
+print("-=-" * 20)
+sleep(2)
+
+nome = str(input("Digite o seu nome: "))
+sobrenome = str(input("Agora, digite o seu sobrenome: "))
+idade = int(input("Forneça a sua idade: "))
+if idade >= 18:
+   email = str(input("Digite o seu e-mail: "))
+   telefone = int(input("Forneça o seu número de telefone: "))
+else:
+    print("Sinto muito, mas é preciso ter mais que 18 anos")
+print("-=-" * 20)
+
+if idade >= 18:
+   print("finalizamos a primeira parte do cadastro")
+   print("Agora, pediremos que nos forneça os dados do seu cartão para o pagamento da viagem")
+   print("Claro, caso queira pagar de outras formas, pedimos que nos informe logo abaixo")
+   print("-=-" * 20)
+
+if idade >=18:
+   dinheiro = str(input("Qual seria a forma de pagamento? "))
+
+if dinheiro == "credito":
+    print("Perfeito!")
+    print = int(input("Nos informe o número da conta: "))
+    print = int(input("Digite o número da agência: "))
+    print = int(input("Digite o código do cartão: "))
+    print = int(input("Agora, digite a validade do seu cartão: "))
+    print("-=-" * 20)
+    print("Pronto!")
+    print("Cadastro finalizado!")
+
+if dinheiro == "debito":
+    print = str("Perfeito!")
+    print = int(input("Nos informe o número da conta: "))
+    print = int(input("Digite o número da agência: "))
+    print = int(input("Digite o código do cartão: "))
+    print = int(input("Agora, digite a validade do seu cartão: "))
+    print("-=-" * 20)
+    print("Pronto!")
+    print("Cadastro finalizado!")
+
+if dinheiro == "boleto":
+    print("Perfeito!")
+    print("Enviaremos um boleto para o seu e-mail, não esqueça de olhar na sua caixa de spam")
+    print("-=-" * 20)
+    print("Pronto!")
+    print("Cadastro finalizado!")
+
